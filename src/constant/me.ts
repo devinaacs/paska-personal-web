@@ -5,7 +5,7 @@ export const me = {
   fullName: "Mikael Prapaskalis G",
   role: "Data Analyst",
   heroTagline: "I help people finding insights through data",
-  email: "paskalis@gmail.com",
+  email: "paskalis97@gmail.com",
   linkedinUrl: "https://www.linkedin.com/in/mikael-prapaskalis-517b69231/",
   whatsappDisplay: "+6282118518423",
   whatsappNumber: "6282118518423",
