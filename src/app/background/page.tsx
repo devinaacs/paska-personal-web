@@ -1,49 +1,14 @@
 import Image from "next/image";
-import Link from "next/link";
 
-export default function ExperiencePage() {
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
+
+export default function BackgroundPage() {
   return (
     <div className="min-h-screen bg-[#0e1a40] text-white flex flex-col">
-      <header className="flex items-center justify-between px-10 py-6">
-        <div className="text-xl font-semibold tracking-wider">
-          <span className="px-3 py-1 border border-[#946b2d] rounded-full text-xs font-medium text-[#946b2d]">
-            EDUCATION & EXPERIENCE
-          </span>
-        </div>
-
-        <nav className="hidden md:flex gap-8 text-sm font-medium">
-          <Link href="/home" className="hover:text-[#946b2d] transition-colors">
-            Home
-          </Link>
-          <Link href="/about" className="hover:text-[#946b2d] transition-colors">
-            About Me
-          </Link>
-          <Link href="/skill" className="hover:text-[#946b2d] transition-colors">
-            Skill
-          </Link>
-          <Link
-            href="/experience"
-            className="text-[#946b2d] font-semibold"
-          >
-            Background
-          </Link>
-          <Link
-            href="/projects"
-            className="hover:text-[#946b2d] transition-colors"
-          >
-            Projects
-          </Link>
-          <Link
-            href="/contact"
-            className="hover:text-[#946b2d] transition-colors"
-          >
-            Contact
-          </Link>
-        </nav>
-      </header>
+      <Navbar />
 
       <main className="flex-1 px-8 md:px-16 pb-16">
-       
         <div className="grid md:grid-cols-[1.1fr_minmax(0,_1fr)] gap-10 md:gap-16 items-start">
           <section>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-wide mb-6">
@@ -264,6 +229,8 @@ export default function ExperiencePage() {
           </section>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

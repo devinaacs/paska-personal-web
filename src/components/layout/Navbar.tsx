@@ -3,13 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { me } from "@/constant/me";
-
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "About Me", href: "/about" },
   { label: "Skill", href: "/skill" },
-  { label: "Background", href: "/experience" },
+  { label: "Background", href: "/background" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
@@ -21,7 +19,7 @@ export function Navbar() {
     <header className="flex items-center justify-between px-10 py-6">
       <div className="text-xl font-semibold tracking-wider">
         <span className="px-3 py-1 border border-[#946b2d] rounded-full text-xs font-medium text-[#946b2d]">
-          {me.role.toUpperCase()}
+          {"Mikael Prapaskalis G".toUpperCase()}
         </span>
       </div>
 
