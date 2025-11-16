@@ -7,8 +7,8 @@ export const me = {
   heroTagline: "I help people finding insights through data",
   email: "paskalis@gmail.com",
   linkedinUrl: "https://www.linkedin.com/in/mikael-prapaskalis-517b69231/",
-  whatsappDisplay: "+62 8xx xxxx xxxx",
-  whatsappNumber: "628xxxxxxxxxx",
+  whatsappDisplay: "+6282118518423",
+  whatsappNumber: "6282118518423",
   cvPath: "/files/resume_mikael.pdf",
   location: "Jakarta, Indonesia",
 } as const;
