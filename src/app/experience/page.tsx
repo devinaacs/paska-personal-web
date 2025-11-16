@@ -43,12 +43,7 @@ export default function ExperiencePage() {
       </header>
 
       <main className="flex-1 px-8 md:px-16 pb-16">
-        <div className="inline-flex items-center rounded-full border border-[#946b2d] px-6 py-2 mb-10 bg-transparent">
-          <span className="text-xs md:text-sm font-semibold tracking-[0.25em]">
-            EDUCATION & EXPERIENCE BACKGROUND
-          </span>
-        </div>
-
+       
         <div className="grid md:grid-cols-[1.1fr_minmax(0,_1fr)] gap-10 md:gap-16 items-start">
           <section>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-wide mb-6">
