@@ -83,6 +83,8 @@ export default function AboutPage() {
               </Link>
               <Link
                 href={me.cvPath}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-3 rounded-full border border-[#946b2d] bg-[#946b2d] text-sm font-semibold hover:bg-transparent hover:text-[#946b2d] transition-colors"
               >
                 Download CV

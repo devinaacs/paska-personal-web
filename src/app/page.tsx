@@ -30,8 +30,8 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-[#d3d3d3]">
-            I help people finding{" "}
-            <span className="text-[#946b2d]">insights</span> through{" "}
+            Helping you see the{" "}
+            <span className="text-[#946b2d]">essentials</span> in the{" "}
             <span className="text-[#946b2d]">data</span>
           </p>
 
@@ -50,7 +50,7 @@ export default function HomePage() {
           <div className="absolute inset-1 rounded-full border-[10px] border-[#222f5b]" />
           <div className="relative w-56 h-56 md:w-72 md:h-72 overflow-hidden rounded-full bg-[#000000]">
             <Image
-              src="/images/mikael.jpeg"
+              src="/images/mikael.jpg"
               alt={me.fullName}
               fill
               className="object-cover"
