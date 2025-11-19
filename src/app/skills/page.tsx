@@ -18,21 +18,21 @@ import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 
 const iconCircleClasses =
-  "flex h-11 w-11 items-center justify-center rounded-full bg-[#946b2d] shadow-md shadow-black/40";
+  "flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-[#946b2d] shadow-md shadow-black/40";
 
 export default function SkillsPage() {
   return (
     <div className="min-h-screen bg-[#0e1a40] text-white flex flex-col">
       <Navbar />
 
-      <main className="flex-1 flex flex-col items-center px-6 md:px-10 pb-16">
-        <section className="w-full max-w-6xl py-16 space-y-10">
+      <main className="flex-1 flex flex-col items-center px-6 md:px-10 pb-16 pt-10 md:pt-16">
+        <section className="w-full max-w-6xl space-y-10">
           <header className="space-y-4">
-            <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-              <h1 className="text-2xl md:text-3xl font-semibold">
+            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+              <h1 className="text-2xl md:text-3xl font-semibold text-center md:text-left">
                 From raw data to clear stories and decisions.
               </h1>
-              <p className="max-w-md text-xs md:text-sm text-slate-200">
+              <p className="max-w-md text-xs md:text-sm text-slate-200 text-center md:text-right mx-auto md:mx-0">
                 A mix of programming, analytics tools, visualization, and
                 statistical methods I use in day-to-day work.
               </p>
@@ -40,7 +40,7 @@ export default function SkillsPage() {
           </header>
 
           <div className="grid gap-8 md:grid-cols-2">
-            <article className="rounded-2xl bg-[#222f5b]/90 p-6 shadow-xl shadow-black/40">
+            <article className="rounded-2xl bg-[#222f5b]/90 p-6 md:p-7 shadow-xl shadow-black/40">
               <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[#f5d08b]">
                 Programming
               </h2>
@@ -77,7 +77,7 @@ export default function SkillsPage() {
               </div>
             </article>
 
-            <article className="rounded-2xl bg-[#020617]/90 p-6 shadow-xl shadow-black/40">
+            <article className="rounded-2xl bg-[#020617]/90 p-6 md:p-7 shadow-xl shadow-black/40">
               <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[#f5d08b]">
                 Data Analytics
               </h2>
@@ -118,7 +118,7 @@ export default function SkillsPage() {
               </div>
             </article>
 
-            <article className="rounded-2xl bg-[#020617]/90 p-6 shadow-xl shadow-black/40">
+            <article className="rounded-2xl bg-[#020617]/90 p-6 md:p-7 shadow-xl shadow-black/40">
               <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[#f5d08b]">
                 Data Visualization
               </h2>
@@ -148,7 +148,7 @@ export default function SkillsPage() {
               </div>
             </article>
 
-            <article className="rounded-2xl bg-[#222f5b]/90 p-6 shadow-xl shadow-black/40">
+            <article className="rounded-2xl bg-[#222f5b]/90 p-6 md:p-7 shadow-xl shadow-black/40">
               <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-[#f5d08b]">
                 Data Analytics
               </h2>
@@ -163,7 +163,10 @@ export default function SkillsPage() {
                 <SkillTag label="EDA (Exploratory Data Analysis)" />
                 <SkillTag label="Segmentation / Clustering" />
                 <SkillTag label="Cohort Analysis" />
-                <SkillTag icon={<Sigma className="h-3.5 w-3.5" />} label="Linear Regression" />
+                <SkillTag
+                  icon={<Sigma className="h-3.5 w-3.5" />}
+                  label="Linear Regression"
+                />
                 <SkillTag label="Logistic Regression" />
                 <SkillTag
                   icon={<Brain className="h-3.5 w-3.5" />}

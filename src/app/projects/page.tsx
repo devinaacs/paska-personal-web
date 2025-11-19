@@ -78,7 +78,6 @@ const projects: Project[] = [
       "https://docs.google.com/presentation/d/10AwsDzyZUF_ILpUKeZx25S73caAo2L_v/edit?usp=sharing&ouid=103326858945801192718&rtpof=true&sd=true",
     notebookLink:
       "https://colab.research.google.com/drive/1-Cpg1jsR2GegDK0gkkdvJ4KDqKCc0unR?usp=sharing",
-    
   },
 ];
 
@@ -87,7 +86,7 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-[#0e1a40] text-white flex flex-col">
       <Navbar />
 
-      <main className="flex-1">
+      <main className="flex-1 flex flex-col items-center px-6 md:px-10 pb-16 pt-10 md:pt-16">
         {projects.map((project, idx) => (
           <ProjectSection
             key={project.id}
@@ -112,24 +111,30 @@ function ProjectSection({
   const isLeft = align === "left";
 
   return (
-    <section id={project.id} className="min-h-screen flex items-center">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-16 lg:flex-row lg:items-center lg:gap-16">
-        {/* Text block */}
-        <div className={`flex-1 space-y-6 ${isLeft ? "" : "lg:order-2"}`}>
+    <section
+      id={project.id}
+      className="min-h-screen flex items-center w-full"
+    >
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 sm:gap-10 lg:gap-16 py-10 md:py-12 lg:py-16 lg:flex-row lg:items-center">
+        <div
+          className={`flex-1 space-y-6 text-center lg:text-left ${
+            isLeft ? "" : "lg:order-2"
+          }`}
+        >
           <div className="space-y-3">
-            <span className="inline-flex items-center rounded-full border border-[#946b2d] bg-[#222f5b]/80 px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-[#f5d08b]">
+            <span className="inline-flex items-center justify-center rounded-full border border-[#946b2d] bg-[#222f5b]/80 px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-[#f5d08b]">
               Notable Project
             </span>
 
-            <div className="flex items-baseline gap-4">
-              <p className="text-4xl md:text-5xl font-bold text-[#f5d08b]">
+            <div className="flex flex-col items-center gap-2 sm:flex-row sm:items-baseline sm:gap-4 lg:items-end">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#f5d08b]">
                 {project.index}
               </p>
               <div>
-                <h2 className="text-xl md:text-2xl font-semibold leading-tight">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-semibold leading-tight">
                   {project.title}
                 </h2>
-                <p className="text-sm md:text-base text-slate-200">
+                <p className="text-xs sm:text-sm md:text-base text-slate-200">
                   {project.subtitle}
                 </p>
               </div>
@@ -140,13 +145,12 @@ function ProjectSection({
             {project.description}
           </p>
 
-          {/* Tags */}
           <div className="space-y-4">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f5d08b]">
+              <p className="text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-[#f5d08b]">
                 Tools
               </p>
-              <div className="mt-2 flex flex-wrap gap-2">
+              <div className="mt-2 flex flex-wrap justify-center lg:justify-start gap-2">
                 {project.tools.map((tool) => (
                   <TagPill key={tool}>{tool}</TagPill>
                 ))}
@@ -154,10 +158,10 @@ function ProjectSection({
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f5d08b]">
+              <p className="text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-[#f5d08b]">
                 Analysis Focus
               </p>
-              <div className="mt-2 flex flex-wrap gap-2">
+              <div className="mt-2 flex flex-wrap justify-center lg:justify-start gap-2">
                 {project.analyses.map((analysis) => (
                   <TagPill key={analysis} variant="outline">
                     {analysis}
@@ -167,8 +171,7 @@ function ProjectSection({
             </div>
           </div>
 
-          {/* Links */}
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
             <ProjectLinkButton
               href={project.deckLink}
               icon={<Presentation className="h-4 w-4" />}
@@ -177,13 +180,16 @@ function ProjectSection({
             <ProjectLinkButton
               href={project.notebookLink}
               icon={<Code className="h-4 w-4" />}
-              label="View Google Collab Python Code"
+              label="View Google Colab Python Code"
             />
           </div>
         </div>
 
-        {/* Highlight card */}
-        <div className={`flex-1 ${isLeft ? "" : "lg:order-1"}`}>
+        <div
+          className={`flex-1 mt-4 sm:mt-6 lg:mt-0 ${
+            isLeft ? "" : "lg:order-1"
+          }`}
+        >
           <ProjectHighlightCard project={project} />
         </div>
       </div>
@@ -195,19 +201,18 @@ function ProjectHighlightCard({ project }: { project: Project }) {
   const baseWrapper =
     "relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#222f5b] via-[#020617] to-[#946b2d] p-[1px] shadow-2xl shadow-black/40";
   const baseInner =
-    "h-full w-full rounded-[1.4rem] bg-[#020617]/95 px-6 py-6 md:px-8 md:py-8 flex flex-col justify-between gap-6";
+    "h-full w-full rounded-[1.4rem] bg-[#020617]/95 px-5 py-5 sm:px-6 sm:py-6 md:px-8 md:py-8 flex flex-col justify-between gap-6";
 
-  // ===== Project 1 – VEXA Performance Review =====
   if (project.id === "performance-review") {
     return (
       <div className={baseWrapper}>
         <div className={baseInner}>
           <div className="space-y-3">
-            <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">
+            <p className="inline-flex items-center gap-2 text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">
               <BarChart3 className="h-4 w-4 text-[#f5d08b]" />
               BLU X VEXA Performance Snapshot
             </p>
-            <h3 className="text-lg md:text-xl font-semibold">
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold">
               From Collection Launch to Revenue Drivers
             </h3>
             <p className="text-xs md:text-sm text-slate-300">
@@ -217,7 +222,7 @@ function ProjectHighlightCard({ project }: { project: Project }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 text-xs md:text-sm text-slate-100">
+          <div className="grid gap-4 sm:grid-cols-2 text-xs md:text-sm text-slate-100">
             <div className="space-y-2">
               <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-400">
                 Key Numbers
@@ -295,17 +300,16 @@ function ProjectHighlightCard({ project }: { project: Project }) {
     );
   }
 
-  // ===== Project 2 – Digital Performance & Insight =====
   if (project.id === "digital-performance") {
     return (
       <div className={baseWrapper}>
         <div className={baseInner}>
           <div className="space-y-3">
-            <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">
+            <p className="inline-flex items-center gap-2 text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">
               <BarChart3 className="h-4 w-4 text-[#f5d08b]" />
               Jan–Oct 2025 • Digital Performance & Insight
             </p>
-            <h3 className="text-lg md:text-xl font-semibold">
+            <h3 className="text-base sm:text-lg md:text-xl font-semibold">
               Multi-Channel Funnel View Across AURA X, BLU X, and ORO X
             </h3>
             <p className="text-xs md:text-sm text-slate-300">
@@ -315,8 +319,7 @@ function ProjectHighlightCard({ project }: { project: Project }) {
             </p>
           </div>
 
-          {/* Metrics grid tuned to the deck */}
-          <div className="grid grid-cols-2 gap-4 text-xs md:text-sm text-slate-100">
+          <div className="grid gap-4 sm:grid-cols-2 text-xs md:text-sm text-slate-100">
             <div className="space-y-2">
               <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-400">
                 New Customer Contribution
@@ -368,7 +371,6 @@ function ProjectHighlightCard({ project }: { project: Project }) {
             </div>
           </div>
 
-          {/* Bottleneck + opportunity */}
           <div className="space-y-2 text-xs md:text-sm text-slate-200">
             <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-400">
               Key Bottleneck & Opportunities
@@ -378,7 +380,7 @@ function ProjectHighlightCard({ project }: { project: Project }) {
                 The main bottleneck is the scale of leads generated vs. the
                 store team&apos;s follow-up capacity — many paid leads are never
                 contacted, capping conversion.
-              </li> 
+              </li>
               <li>
                 Audience &amp; visual-performance views by age, gender, and
                 region reveal which segments and creatives deserve priority in
@@ -389,14 +391,13 @@ function ProjectHighlightCard({ project }: { project: Project }) {
 
           <p className="text-[0.65rem] md:text-[0.7rem] text-slate-500">
             *Data across all brands has been anonymized and randomized for
-            confidentiality. 
+            confidentiality.
           </p>
         </div>
       </div>
     );
   }
 
-  // Fallback (in case you add more projects later)
   return (
     <div className={baseWrapper}>
       <div className={baseInner}>
@@ -417,7 +418,6 @@ function ProjectHighlightCard({ project }: { project: Project }) {
     </div>
   );
 }
-
 
 function MetricLine({
   label,
