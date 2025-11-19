@@ -23,11 +23,11 @@ export function Navbar() {
   return (
     <header className="border-b border-[#222f5b]/60 bg-[#0e1a40]/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 md:px-10 py-4 md:py-6">
-        <div className="text-xl font-semibold tracking-wider">
+        <Link href="/" className="text-xl font-semibold tracking-wider">
           <span className="px-3 py-1 border border-[#946b2d] rounded-full text-xs font-medium text-[#946b2d]">
             {"Mikael Prapaskalis G".toUpperCase()}
           </span>
-        </div>
+        </Link>
 
         <nav className="hidden md:flex gap-8 text-sm font-medium">
           {NAV_ITEMS.map((item) => (

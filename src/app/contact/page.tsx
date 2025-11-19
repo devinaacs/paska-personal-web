@@ -44,9 +44,15 @@ export default function ContactPage() {
                     {me.whatsappDisplay}
                   </a>
                 </div>
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white flex items-center justify-center bg-[#222f5b]/40">
+                <a
+                  href={`https://wa.me/${me.whatsappNumber}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="WhatsApp"
+                  className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white flex items-center justify-center bg-[#222f5b]/40 hover:bg-[#f5d08b] hover:text-[#0e1a40] transition-colors"
+                >
                   <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
-                </div>
+                </a>
               </div>
 
               <div className="flex items-center gap-4">
@@ -59,9 +65,13 @@ export default function ContactPage() {
                     {me.email}
                   </a>
                 </div>
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white flex items-center justify-center bg-[#222f5b]/40">
+                <a
+                  href={`mailto:${me.email}`}
+                  aria-label="Email"
+                  className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white flex items-center justify-center bg-[#222f5b]/40 hover:bg-[#f5d08b] hover:text-[#0e1a40] transition-colors"
+                >
                   <Mail className="w-5 h-5 md:w-6 md:h-6" />
-                </div>
+                </a>
               </div>
 
               <div className="flex items-center gap-4">
@@ -76,9 +86,15 @@ export default function ContactPage() {
                     {me.linkedinUrl}
                   </a>
                 </div>
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white flex items-center justify-center bg-[#222f5b]/40">
+                <a
+                  href={me.linkedinUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                  className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white flex items-center justify-center bg-[#222f5b]/40 hover:bg-[#f5d08b] hover:text-[#0e1a40] transition-colors"
+                >
                   <Linkedin className="w-5 h-5 md:w-6 md:h-6" />
-                </div>
+                </a>
               </div>
             </div>
           </section>
