@@ -29,6 +29,7 @@ export const article01: BlogArticle = {
     },
     {
       title: "The Agile Manifesto and Its Core Priorities",
+      headingStyle: "subsection",
       body: [
         "The foundation of Agile comes from the [[yellow:**Agile Manifesto**]], which introduced four core values. These values are not saying that tools, planning, or documentation are useless. They simply remind teams what should come first.",
       ],
@@ -41,6 +42,7 @@ export const article01: BlogArticle = {
     },
     {
       title: "The 12 Agile Principles in Practice",
+      headingStyle: "subsection",
       body: [
         "These values become more practical through the **12 Agile principles**, which explain how Agile is applied in real work. A simple way to understand these principles is to group them into four broader themes.",
       ],
@@ -61,6 +63,7 @@ export const article01: BlogArticle = {
     },
     {
       title: "Why Agile Fits a VUCA Environment",
+      headingStyle: "subsection",
       body: [
         "Agile becomes even more relevant in environments shaped by **VUCA**, which stands for **volatility, uncertainty, complexity, and ambiguity**. In this kind of environment, a rigid plan can become outdated very quickly. Agile offers a more realistic way to move forward because it allows teams to adapt without losing focus on outcomes.",
       ],
@@ -74,7 +77,7 @@ export const article01: BlogArticle = {
     },
     {
       title: "Understanding Scrum: Turning Agile Principles Into Daily Practice",
-      headingStyle: "hero",
+      headingStyle: "subsection",
       body: [
         "[[pink:If Agile is the mindset, then **Scrum** is one of the clearest ways that mindset gets applied in real work.]] [[green:**Scrum is one of the most widely used Agile frameworks because it gives teams a practical structure for handling complex work without becoming too rigid.**]] It helps teams build, deliver, and improve products in environments where change, uncertainty, and risk are part of the job.",
         "One important distinction is that **Agile and Scrum are not the same thing.** [[cyan:Agile is the broader philosophy, while Scrum is a framework that puts Agile ideas into action.]] [[magenta:Scrum gives teams a shared structure, common roles, and repeatable practices that make adaptability easier in everyday work.]] A key idea behind Scrum is that it uses an *iterative and incremental approach*.",
@@ -87,6 +90,7 @@ export const article01: BlogArticle = {
     },
     {
       title: "Empiricism and the Three Scrum Pillars",
+      headingStyle: "subsection",
       body: [
         "This allows the team to check progress regularly, learn from what happens, and improve before going too far in the wrong direction.",
         "Scrum is also built on *empiricism*, which means decisions should be based on real experience, observation, and evidence rather than assumptions. Instead of trying to predict everything perfectly from the start, Scrum treats each cycle of work as a chance to learn.",
@@ -107,6 +111,7 @@ export const article01: BlogArticle = {
     },
     {
       title: "The Five Scrum Values",
+      headingStyle: "subsection",
       body: [
         "To make these pillars work in practice, Scrum also relies on five values: *commitment, courage, focus, openness,* and *respect*.",
       ],
@@ -120,6 +125,7 @@ export const article01: BlogArticle = {
     },
     {
       title: "Roles, Vision, and Shared Accountability",
+      headingStyle: "subsection",
       body: [
         "[[green:Another important part of Scrum is having a clear sense of **mission** and **product vision**.]] A *mission* explains why the work exists and what the team is trying to contribute in a broader sense. A *product vision* gives a picture of what the finished product or outcome should become. These two ideas help create alignment, motivation, and direction, especially when day-to-day work becomes complex.",
         "Scrum teams are also defined by three main roles: the *Scrum Master*, the *Product Owner*, and the *Development Team*.",
@@ -138,6 +144,7 @@ export const article01: BlogArticle = {
     },
     {
       title: "Key Scrum Terms That Shape Daily Work",
+      headingStyle: "subsection",
       body: ["A few key Scrum terms also start to become important here."],
       bulletStyle: "arrow",
       bullets: [
@@ -157,7 +164,7 @@ export const article01: BlogArticle = {
     },
     {
       title: "Applying Agile Beyond the Team",
-      headingStyle: "hero",
+      headingStyle: "subsection",
       body: [
         "The last part of the course expands Agile beyond Scrum events and team routines. [[green: It shows that Agile is not only about managing work in smaller cycles, but also about helping organizations deliver value, respond to change, and support teams more effectively.]] At this level, Agile becomes less about process alone and more about leadership, collaboration, and continuous improvement.",
         "A key idea here is [[rose:**value-driven delivery**]]. Agile is not just about finishing tasks faster, but about making sure the work actually matters. [[magenta:That means building the right thing, building it well, and making sure it continues to deliver value after release.]] This part also introduces value roadmaps, which connect product vision, roadmap planning, and release plans so teams can stay aligned while still adapting when needed.",
@@ -167,7 +174,7 @@ export const article01: BlogArticle = {
     },
     {
       title: "Closing Thought",
-      headingStyle: "section",
+      headingStyle: "subsection",
       body: [
         "So after learning about Agile from mindset, to Scrum, to implementation, to organizational change, the biggest takeaway is simple: Agile is not about doing everything perfectly, but about staying open, improving continuously, and building what truly matters.",
         "Which is kind of comforting because nobody has it all figured out all at once...",

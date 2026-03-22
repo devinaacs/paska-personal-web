@@ -40,14 +40,14 @@ export async function generateMetadata({
 }
 
 const HIGHLIGHT_STYLES: Record<string, string> = {
-  cyan: "bg-[#14f1ff]",
-  green: "bg-[#b8e986]",
-  yellow: "bg-[#ffe84a]",
-  pink: "bg-[#eab3d3]",
-  magenta: "bg-[#ff35ee]",
-  red: "bg-[#ff2f2f]",
-  blue: "bg-[#5b8eff] text-black",
-  rose: "bg-[#f2cfd3]",
+  cyan: "bg-[#314177] text-white",
+  green: "bg-[#1f3b3d] text-[#2f2e2a]",
+  yellow: "bg-[#4f3117] text-white",
+  pink: "bg-[#1f3b3d] text-[#2f2e2a]",
+  magenta: "bg-[#6c2828] text-white",
+  red: "bg-[#6c2828] text-white",
+  blue: "bg-[#314177] text-white",
+  rose: "bg-[#4f3117] text-white",
 };
 
 function renderRichText(text: string) {
@@ -129,7 +129,7 @@ export default async function BlogArticlePage({
       <main className="flex-1">
         <>
             <section className="border-b border-[#222f5b]/70">
-              <div className="mx-auto max-w-4xl px-6 py-14 md:px-10 md:py-18">
+              <div className="mx-auto max-w-4xl px-6 py-12 md:px-10 md:py-16">
                 <Link
                   href="/blog"
                   className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-[#f5d08b]"
@@ -147,7 +147,7 @@ export default async function BlogArticlePage({
                   <span>{article.readTime}</span>
                 </div>
 
-                <h1 className="mt-5 text-3xl font-bold leading-tight md:text-5xl">
+                <h1 className="mt-5 text-2xl font-bold leading-tight md:text-4xl">
                   {article.title}
                 </h1>
 
@@ -157,7 +157,7 @@ export default async function BlogArticlePage({
               </div>
             </section>
 
-            <section className={`mx-auto px-4 ${isDocumentLayout ? "max-w-6xl py-10 md:px-8 md:py-14" : "max-w-5xl py-14 md:px-8 md:py-16"}`}>
+            <section className={`mx-auto px-4 ${isDocumentLayout ? "max-w-6xl py-8 md:px-8 md:py-12" : "max-w-5xl py-12 md:px-8 md:py-14"}`}>
               <article
                 className={
                   isDocumentLayout
@@ -174,10 +174,10 @@ export default async function BlogArticlePage({
                             isDocumentLayout ? "text-white" : "text-black"
                           } ${
                             section.headingStyle === "hero"
-                              ? "text-4xl font-semibold leading-tight md:text-6xl"
+                              ? "text-3xl font-semibold leading-tight md:text-5xl"
                               : section.headingStyle === "section"
-                                ? "text-3xl font-semibold leading-tight md:text-5xl"
-                                : "text-xl font-semibold leading-snug md:text-2xl"
+                                ? "text-2xl font-semibold leading-tight md:text-4xl"
+                                : "text-xl font-semibold leading-snug md:text-xl"
                           }`}
                         >
                           {section.title}
@@ -193,14 +193,14 @@ export default async function BlogArticlePage({
                       {section.body.map((paragraph) => (
                         <p
                           key={paragraph}
-                          className={`${isDocumentLayout ? "text-[1.05rem] leading-[1.65] text-justify text-slate-100 md:text-[1.15rem]" : "text-sm leading-7 text-black md:text-base"}`}
+                          className={`${isDocumentLayout ? "text-base leading-[1.7] text-justify text-slate-100 md:text-[1.02rem]" : "text-sm leading-7 text-black md:text-base"}`}
                         >
                           {renderRichText(paragraph)}
                         </p>
                       ))}
 
                       {section.bullets && (
-                        <ul className={`${section.bulletStyle === "arrow" ? "pl-10" : "pl-8"} space-y-3 ${isDocumentLayout ? "text-[1.05rem] leading-[1.65] text-justify text-slate-100 md:text-[1.15rem]" : "text-sm leading-7 text-black md:text-base"}`}>
+                        <ul className={`${section.bulletStyle === "arrow" ? "pl-10" : "pl-8"} space-y-3 ${isDocumentLayout ? "text-base leading-[1.7] text-justify text-slate-100 md:text-[1.02rem]" : "text-sm leading-7 text-black md:text-base"}`}>
                           {section.bullets.map((item) => (
                             <li
                               key={item}
@@ -222,7 +222,7 @@ export default async function BlogArticlePage({
                           key={noteItem}
                           className={
                             section.noteStyle === "paragraph"
-                              ? `${isDocumentLayout ? "text-[1.05rem] leading-[1.65] text-justify text-slate-100 md:text-[1.15rem]" : "text-sm leading-7 text-black md:text-base"}`
+                              ? `${isDocumentLayout ? "text-base leading-[1.7] text-justify text-slate-100 md:text-[1.02rem]" : "text-sm leading-7 text-black md:text-base"}`
                               : "text-center text-sm italic leading-6 text-[#2647ff] md:text-base"
                           }
                         >

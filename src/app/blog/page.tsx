@@ -1,4 +1,4 @@
-import { ArrowRight,BookOpen, Clock3 } from "lucide-react";
+import { ArrowRight, BookOpen, Clock3 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -22,12 +22,12 @@ export default function BlogPage() {
 
       <main className="flex-1">
         <section className="border-b border-[#222f5b]/70">
-          <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-14 md:px-10 md:py-20">
+          <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 md:px-10 md:py-16">
             <div className="max-w-3xl">
               <span className="inline-flex items-center rounded-full border border-[#946b2d] bg-[#222f5b]/60 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#f5d08b]">
                 Insight Journal
               </span>
-              <h1 className="mt-5 text-3xl font-bold leading-tight md:text-5xl">
+              <h1 className="mt-5 text-2xl font-bold leading-tight md:text-4xl">
                 A place for ideas, reflections, and everything worth writing.
               </h1>
               <p className="mt-5 max-w-2xl text-sm leading-relaxed text-slate-200 md:text-base">
@@ -47,7 +47,7 @@ export default function BlogPage() {
                   <span>{featuredArticle.readTime}</span>
                 </div>
 
-                <h2 className="mt-5 max-w-2xl text-xl font-bold leading-tight md:text-3xl">
+                <h2 className="mt-5 max-w-2xl text-lg font-bold leading-tight md:text-2xl">
                   {featuredArticle.title}
                 </h2>
 
@@ -79,7 +79,7 @@ export default function BlogPage() {
                         <BookOpen className="h-4 w-4 text-[#f5d08b]" />
                         {article.publishedLabel}
                       </div>
-                      <h3 className="mt-3 text-base font-semibold leading-snug md:text-lg">
+                      <h3 className="mt-3 text-sm font-semibold leading-snug md:text-base">
                         {article.title}
                       </h3>
                       <div className="mt-3 flex items-center gap-2 text-sm text-slate-300">
