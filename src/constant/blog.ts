@@ -92,7 +92,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "what-i-learned-from-google-agile-project-management",
     title:
-      "What I Learned from Google Agile Project Management — and Why Agile Is More Than Just Moving Fast",
+      "What I Learned from Google Agile Project Management and Why Agile Is More Than Just Moving Fast",
     summary:
       "A reflection on how Agile is not only about speed, but also about sustainability, collaboration, clarity, and continuous improvement.",
     category: "Agile Reflection",
@@ -101,7 +101,7 @@ export const blogArticles: BlogArticle[] = [
     sections: [
       {
         title:
-          "What I Learned from Google Agile Project Management — and Why Agile Is More Than Just Moving Fast",
+          "What I Learned from Google Agile Project Management and Why Agile Is More Than Just Moving Fast",
         body: [
           "After finishing the Google Agile Project Management course, I found myself reflecting on how Agile is often understood in real working environments.",
           "Before taking the course, I mostly saw Agile as a way to move quickly, adapt to change, and keep delivery going. In many teams, that is often what stands out first: fast execution, visible progress, and continuous movement. But through this course, I started to understand Agile in a broader and more meaningful way.",
