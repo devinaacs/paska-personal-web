@@ -1,9 +1,10 @@
-import { BookOpen, Clock3, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { ArrowRight,BookOpen, Clock3 } from "lucide-react";
 import { Metadata } from "next";
+import Link from "next/link";
 
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+
 import { blogArticles } from "@/constant/blog";
 
 export const metadata: Metadata = {

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+
 import { blogArticles, getBlogArticleBySlug } from "@/constant/blog";
 
 type BlogArticlePageProps = {
