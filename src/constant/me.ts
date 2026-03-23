@@ -3,8 +3,9 @@ export const me = {
   lastName: "Prapaskalis",
   shortLast: "G",
   fullName: "Mikael Prapaskalis G",
-  role: "Data Analyst",
-  heroTagline: "I help people finding insights through data",
+  role: "Business Analyst",
+  heroTagline:
+    "Bridging business needs and data-driven decisions",
   email: "paskalis97@gmail.com",
   linkedinUrl: "https://www.linkedin.com/in/mikael-prapaskalis/",
   whatsappDisplay: "+6282118518423",
