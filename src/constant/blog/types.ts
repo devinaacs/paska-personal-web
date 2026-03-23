@@ -5,7 +5,7 @@ export type BlogSection = {
   note?: string[];
   noteStyle?: "source" | "paragraph";
   quote?: string;
-  bulletStyle?: "ordered" | "arrow";
+  bulletStyle?: "ordered" | "arrow" | "unordered";
   headingStyle?: "hero" | "section" | "subsection";
   image?: {
     src: string;

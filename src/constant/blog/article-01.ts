@@ -1,7 +1,7 @@
 import { BlogArticle } from "./types";
 
 export const article01: BlogArticle = {
-  slug: "agile-advantage-navigating-complexity-through-scrum",
+  slug: "understanding-the-agile-mindset",
   title: "Understanding the Agile Mindset",
   summary:
     "Agile is often described as a project management approach, but it is better understood as a way of thinking about work.",
